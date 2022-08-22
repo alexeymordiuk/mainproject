@@ -1,0 +1,296 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}	
+
+html,body {
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #F5F5F5;
+}
+
+.container__wprapper {
+	width: 100%;
+   background-color: #fff;
+	margin: 0 auto;
+}
+
+.app__inner { 
+	display: flex;
+	align-items: center;
+}
+
+.app__users {
+	border-right: 1px solid #ebe7fb;
+	width: 40%;
+}
+
+.react-tabs {
+	max-width: 900px;
+	width: 100%;
+	margin: auto;
+}
+
+.app__search {
+	border-bottom: 1px solid #ebe7fb;
+	background-color: #F0F0F0;
+	padding: 20px;
+}
+
+.app__search img {
+	max-width: 40px;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.app__search-field {
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	padding: 5px;
+	background-color: #fff;
+}
+
+.app__search-field input{
+	padding: 0 15px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.app__title {
+	padding: 20px;
+	color: blue;
+}
+
+.react-tabs__tab {
+	border-bottom: 1px solid #ebe7fb;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.react-tabs__tab-list {
+	background-color: #fff;
+}
+
+.react-tabs__tab:hover {
+ opacity: 0.5;
+}
+
+.app__chat {
+	width: 70%;
+	min-height: 655px;
+	display: flex;
+	flex-direction: column;
+}
+
+.app__body {
+	max-height: calc(100vh - calc(50vh / 2));
+	overflow: auto;
+	background-color: #F5F5F5;
+	overflow-x: hidden;
+}
+
+ .chat__online {
+	transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+	transform: scale(0);
+	animation-name: showIn;
+	animation-duration: 0.2s; 
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: cubic-bezier(
+	  0.88,
+	  0.19,
+	  0.37,
+	  1.11
+	); 
+	animation-fill-mode: both; 
+	animation-delay: 0.1s; 
+	padding: 10px;
+ }
+
+ @keyframes showIn {
+	0% {
+	  transform: scale(0);
+	}
+	100% {
+	  transform: scale(1);
+	}
+ }
+
+.app__wrapper-eneter {
+	background-color: #F0F0F0;
+	height: 100px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin-top: auto;
+	padding: 20px;
+}
+
+.app__entered-messeges {
+	background-color: #fff;
+	padding: 15px 10px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 650px;
+	width: 100%;
+}
+
+.app__sms {
+	padding-left: 50px;
+	color: #ceccd3;
+}
+
+.app__entered-messeges input {
+	flex-grow: 1;
+	width: 100%;
+	width: 470px;
+	padding: 0 15px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+
+.app__entered-messeges button {
+	width: 20px;
+	height: 20px;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 0;
+	border-radius: 5px;
+	line-height: 36px;
+	transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+}
+
+.app__entered-messeges button:hover {
+	transform: scale(1.2);
+ }
+ .app__entered-messeges button i {
+	display: block;
+ }
+/* CHAT */
+.chat__message {
+	color: #fff;
+	background-color: blue;
+	width: max-content;
+	padding: 10px;
+	border-radius: 15px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	max-width: 300px;
+}
+
+.chat__date {
+	font-size: 12px;
+	color: #ceccd3;
+	text-align: right;
+}
+
+.app__users-users {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 10px;
+}
+
+.app__users-users img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.app__date-users {
+	margin-left: auto;
+}
+
+/* MEDIA */
+@media (max-width: 991px) {
+	.app__inner {
+		flex-direction: column;
+	}
+
+	.app__search-field {
+		padding: 10px;
+	}
+
+	.app__search-field input{
+		font-size: 20px;
+	}
+
+	.app__users {
+		width: 100%;
+	}
+
+	.app__chat {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.app__wrapper-eneter {
+		margin-top: 0;
+	}
+
+	.app__title {
+		text-align: center;
+	}
+
+	.app__search {
+		text-align: center;
+	}
+
+	.app__search img {
+		max-width: 60px;
+	}
+
+	.app__users-users img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.app__users-name {
+		font-size: 20px;
+	}
+
+	.app__date-users {
+		font-size: 15px;
+	}
+
+	.chat__message {
+		font-size: 20px;
+	}
+
+	.chat__date {
+		font-size: 15px;
+	}
+
+	.app__entered-messeges input {
+		font-size: 20px;
+		width: 280px;
+	}
+
+	.app__sms {
+		font-size: 20px;
+		padding-left: 20px;
+	}
+}
