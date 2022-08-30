@@ -1,0 +1,93 @@
+.books {
+	padding-bottom: clamp(5rem, 3.614rem + 6.93vw, 9.375rem);
+}
+
+.books__title::after {
+	content: "";
+	height: 3px;
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 23px;
+	background-color: var(--other-color);
+}
+
+.books__container {
+	margin-top: clamp(2.5rem, 1.906rem + 2.97vw, 4.375rem);
+	display: flex;
+	align-items: center;
+	gap: clamp(1.25rem, 0.696rem + 2.77vw, 3rem);
+	justify-content: center;
+}
+
+.books__inner {
+	display: flex;
+	align-items: center;
+	gap: clamp(0.938rem, 0.64rem + 1.49vw, 1.875rem);
+}
+
+.books__img {
+	max-width: 287px;
+	height: 382px;
+	width: 100%;
+}
+
+.books__preview {
+	font-size: clamp(1.25rem, 1.012rem + 1.19vw, 2rem);
+	line-height: clamp(0.938rem, 0.482rem + 2.28vw, 2.375rem);
+	letter-spacing: 0.32px;
+	color: var(--bg-color);
+}
+
+.books__content span {
+	color: var(--other-color);
+	font-size: clamp(0.938rem, 0.819rem + 0.59vw, 1.313rem);
+	padding-bottom: 17px;
+}
+
+.books__text {
+	max-width: 287px;
+	padding-bottom: 17px;
+}
+
+.books__subtitle {
+	font-size: clamp(0.938rem, 0.759rem + 0.89vw, 1.5rem);
+	padding-bottom: 27px;
+	color: var(--bg-color);
+}
+
+.books__wrapper {
+	position: relative;
+	margin-left: 20px;
+}
+
+.books__circle {
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	left: -25px;
+	top: 5px;
+	background-color: var(--other-color);
+}
+
+@media (max-width: 1024px) {
+	.books__container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.books__inner {
+		flex-direction: column;
+	}
+
+	.books__content {
+		text-align: center;
+	}
+
+	.books__circle {
+		left: 60px;
+		top: 0px;
+	}
+}

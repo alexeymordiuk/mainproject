@@ -1,0 +1,148 @@
+.author {
+	background: #F5F8FC;
+	padding-bottom: clamp(5rem, 2.822rem + 10.89vw, 11.875rem);
+	margin-bottom: clamp(5rem, 4.089rem + 4.55vw, 7.875rem);
+}
+
+.author__container {
+	display: flex;
+	align-items: center;
+	padding-top: clamp(5rem, 3.614rem + 6.93vw, 9.375rem);
+	gap: clamp(5rem, 2.624rem + 11.88vw, 12.5rem);
+}
+
+.author__wprapper{
+	position: relative;
+	z-index: 50;
+}
+
+.author__img {
+	max-width: 525px;
+	height: 620px;
+	width: 100%;
+	z-index: 50;
+}
+
+.author__line {
+	position: absolute;
+	border: 10px solid var(--other-color);
+	top: 40px;
+	right: -60px;
+	width: 545px;
+	height: 640px;
+	z-index: -1;
+}
+
+.author__title {
+	text-align: left;
+}
+
+.author__title::after {
+	content: "";
+	height: 3px;
+	width: 50px;
+	display: block;
+	margin: 33px 0 23px 0;
+	background-color: var(--other-color);
+}
+
+.author__text {
+	max-width: 559px;
+	font-size: clamp(0.938rem, 0.819rem + 0.59vw, 1.313rem);
+	line-height: 34px;
+	padding-bottom: clamp(0.938rem, 0.581rem + 1.78vw, 2.063rem);
+}
+
+.author__statisticks {
+	display: flex;
+	align-items: center;
+	gap: clamp(1.25rem, 0.913rem + 1.68vw, 2.313rem);
+	padding-bottom: clamp(1.563rem, 0.988rem + 2.87vw, 3.375rem);
+}
+
+.author__about-books {
+	border-right: 1px solid var(--other-color);
+}
+
+.author__about-books:nth-child(3) {
+	border-right: none;
+}
+
+.author__number {
+	font-size: clamp(1.875rem, 1.4rem + 2.38vw, 3.375rem);
+	color: var(--bg-color);
+}
+
+.author__about-books p {
+	padding-right: 30px;
+	font-size: 17px;
+	color: #969AA0;
+}
+
+.author__contact {
+	max-height: 484px;
+	width: 100%;
+	background-color: var(--bg-color);
+}
+
+.author__inner {
+	display: flex;
+	align-items: center;
+	padding: 15px 0 15px 20px;
+	gap: clamp(1.25rem, 0.854rem + 1.98vw, 2.5rem);
+}
+
+.author__img-qr {
+	max-width: 130px;
+	height: 130px;
+	width: 100%;
+}
+
+.author__contacts {
+	display: flex;
+	flex-direction: column;
+}
+
+.author__ns {
+	font-size: clamp(0.938rem, 0.799rem + 0.69vw, 1.375rem);
+	color: var(--other-color);
+	padding-bottom: 10px;
+}
+
+.simple{
+	font-size: clamp(0.75rem, 0.631rem + 0.59vw, 1.125rem);
+	line-height: 28px;
+	color: #B4C7E7;
+}
+
+
+/* MEDIA */
+@media (max-width: 1024px) {
+	.author__container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.author__line {
+		display: none;
+	}
+
+	.author__img {
+		height: 450px;
+	}
+
+	.author__title {
+		text-align: center;
+	}
+
+	.author__title::after {
+		margin: 0 auto;	
+	}
+
+	.author__text {
+		margin-top: 15px;
+	}
+
+	
+}
